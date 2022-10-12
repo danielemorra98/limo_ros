@@ -3,9 +3,9 @@
 <robot name="limo_ackerman" xmlns:xacro="http://ros.org/wiki/xacro">
 
     <xacro:arg name="robot_namespace" default="/" />
-    <xacro:include filename="$(find limo_description)/urdf/limo_xacro.xacro" />
-    <xacro:include filename="$(find limo_description)/urdf/limo_steering_hinge.xacro" />
-    <xacro:include filename="$(find limo_description)/urdf/limo_ackerman.gazebo" />
+    <xacro:include filename="limo_xacro.xacro" />
+    <xacro:include filename="limo_steering_hinge.xacro" />
+    <xacro:include filename="limo_ackerman.gazebo" />
 
     <!-- Variables -->
     <xacro:property name="M_PI" value="3.14159"/>
@@ -34,7 +34,7 @@
         <visual>
             <origin xyz="0 0 -0.15" rpy="0 0 1.57" />
             <geometry>
-                <mesh filename="package://limo_description/meshes/limo_base.dae" scale="1 1 1"/>
+                <mesh filename="../meshes/limo_base.dae" scale="1 1 1"/>
             </geometry>
         </visual>
         <collision>
@@ -91,7 +91,7 @@
         <visual>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-                <mesh filename="package://limo_description/meshes/limo_wheel.dae" />
+                <mesh filename="../limo_description/meshes/limo_wheel.dae" />
             </geometry>
         </visual>
         <collision>
@@ -117,7 +117,7 @@
         <visual>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-                <mesh filename="package://limo_description/meshes/limo_wheel.dae" />
+                <mesh filename="../limo_description/meshes/limo_wheel.dae" />
             </geometry>
         </visual>
             <collision>
